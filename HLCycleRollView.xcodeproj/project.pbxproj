@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A3EAEA21DEECB4000E40C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEA11DEECB4000E40C0D /* main.m */; };
+		3A3EAEA51DEECB4000E40C0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEA41DEECB4000E40C0D /* AppDelegate.m */; };
+		3A3EAEA81DEECB4000E40C0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEA71DEECB4000E40C0D /* ViewController.m */; };
+		3A3EAEAB1DEECB4000E40C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EAEA91DEECB4000E40C0D /* Main.storyboard */; };
+		3A3EAEAD1DEECB4100E40C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EAEAC1DEECB4100E40C0D /* Assets.xcassets */; };
+		3A3EAEB01DEECB4100E40C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EAEAE1DEECB4100E40C0D /* LaunchScreen.storyboard */; };
+		3A3EAEBB1DEECB4100E40C0D /* HLCycleRollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEBA1DEECB4100E40C0D /* HLCycleRollViewTests.m */; };
+		3A3EAEC61DEECB4100E40C0D /* HLCycleRollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEC51DEECB4100E40C0D /* HLCycleRollViewUITests.m */; };
+		3A3EAED61DEECB9100E40C0D /* HLCycleRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAED51DEECB9100E40C0D /* HLCycleRollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A3EAEB71DEECB4100E40C0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A3EAE951DEECB4000E40C0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A3EAE9C1DEECB4000E40C0D;
+			remoteInfo = HLCycleRollView;
+		};
+		3A3EAEC21DEECB4100E40C0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A3EAE951DEECB4000E40C0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A3EAE9C1DEECB4000E40C0D;
+			remoteInfo = HLCycleRollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A3EAE9D1DEECB4000E40C0D /* HLCycleRollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLCycleRollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3EAEA11DEECB4000E40C0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A3EAEA31DEECB4000E40C0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A3EAEA41DEECB4000E40C0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A3EAEA61DEECB4000E40C0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A3EAEA71DEECB4000E40C0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A3EAEAA1DEECB4000E40C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A3EAEAC1DEECB4100E40C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A3EAEAF1DEECB4100E40C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A3EAEB11DEECB4100E40C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A3EAEB61DEECB4100E40C0D /* HLCycleRollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLCycleRollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3EAEBA1DEECB4100E40C0D /* HLCycleRollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLCycleRollViewTests.m; sourceTree = "<group>"; };
+		3A3EAEBC1DEECB4100E40C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A3EAEC11DEECB4100E40C0D /* HLCycleRollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLCycleRollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3EAEC51DEECB4100E40C0D /* HLCycleRollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLCycleRollViewUITests.m; sourceTree = "<group>"; };
+		3A3EAEC71DEECB4100E40C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A3EAED41DEECB9100E40C0D /* HLCycleRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCycleRollView.h; sourceTree = "<group>"; };
+		3A3EAED51DEECB9100E40C0D /* HLCycleRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCycleRollView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A3EAE9A1DEECB4000E40C0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEB31DEECB4100E40C0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEBE1DEECB4100E40C0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A3EAE941DEECB4000E40C0D = {
+			isa = PBXGroup;
+			children = (
+				3A3EAE9F1DEECB4000E40C0D /* HLCycleRollView */,
+				3A3EAEB91DEECB4100E40C0D /* HLCycleRollViewTests */,
+				3A3EAEC41DEECB4100E40C0D /* HLCycleRollViewUITests */,
+				3A3EAE9E1DEECB4000E40C0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A3EAE9E1DEECB4000E40C0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAE9D1DEECB4000E40C0D /* HLCycleRollView.app */,
+				3A3EAEB61DEECB4100E40C0D /* HLCycleRollViewTests.xctest */,
+				3A3EAEC11DEECB4100E40C0D /* HLCycleRollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A3EAE9F1DEECB4000E40C0D /* HLCycleRollView */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAED31DEECB9100E40C0D /* HLCycleRollView */,
+				3A3EAEA31DEECB4000E40C0D /* AppDelegate.h */,
+				3A3EAEA41DEECB4000E40C0D /* AppDelegate.m */,
+				3A3EAEA61DEECB4000E40C0D /* ViewController.h */,
+				3A3EAEA71DEECB4000E40C0D /* ViewController.m */,
+				3A3EAEA91DEECB4000E40C0D /* Main.storyboard */,
+				3A3EAEAC1DEECB4100E40C0D /* Assets.xcassets */,
+				3A3EAEAE1DEECB4100E40C0D /* LaunchScreen.storyboard */,
+				3A3EAEB11DEECB4100E40C0D /* Info.plist */,
+				3A3EAEA01DEECB4000E40C0D /* Supporting Files */,
+			);
+			path = HLCycleRollView;
+			sourceTree = "<group>";
+		};
+		3A3EAEA01DEECB4000E40C0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAEA11DEECB4000E40C0D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A3EAEB91DEECB4100E40C0D /* HLCycleRollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAEBA1DEECB4100E40C0D /* HLCycleRollViewTests.m */,
+				3A3EAEBC1DEECB4100E40C0D /* Info.plist */,
+			);
+			path = HLCycleRollViewTests;
+			sourceTree = "<group>";
+		};
+		3A3EAEC41DEECB4100E40C0D /* HLCycleRollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAEC51DEECB4100E40C0D /* HLCycleRollViewUITests.m */,
+				3A3EAEC71DEECB4100E40C0D /* Info.plist */,
+			);
+			path = HLCycleRollViewUITests;
+			sourceTree = "<group>";
+		};
+		3A3EAED31DEECB9100E40C0D /* HLCycleRollView */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EAED41DEECB9100E40C0D /* HLCycleRollView.h */,
+				3A3EAED51DEECB9100E40C0D /* HLCycleRollView.m */,
+			);
+			path = HLCycleRollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A3EAE9C1DEECB4000E40C0D /* HLCycleRollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3EAECA1DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollView" */;
+			buildPhases = (
+				3A3EAE991DEECB4000E40C0D /* Sources */,
+				3A3EAE9A1DEECB4000E40C0D /* Frameworks */,
+				3A3EAE9B1DEECB4000E40C0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HLCycleRollView;
+			productName = HLCycleRollView;
+			productReference = 3A3EAE9D1DEECB4000E40C0D /* HLCycleRollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A3EAEB51DEECB4100E40C0D /* HLCycleRollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3EAECD1DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollViewTests" */;
+			buildPhases = (
+				3A3EAEB21DEECB4100E40C0D /* Sources */,
+				3A3EAEB31DEECB4100E40C0D /* Frameworks */,
+				3A3EAEB41DEECB4100E40C0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A3EAEB81DEECB4100E40C0D /* PBXTargetDependency */,
+			);
+			name = HLCycleRollViewTests;
+			productName = HLCycleRollViewTests;
+			productReference = 3A3EAEB61DEECB4100E40C0D /* HLCycleRollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A3EAEC01DEECB4100E40C0D /* HLCycleRollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3EAED01DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollViewUITests" */;
+			buildPhases = (
+				3A3EAEBD1DEECB4100E40C0D /* Sources */,
+				3A3EAEBE1DEECB4100E40C0D /* Frameworks */,
+				3A3EAEBF1DEECB4100E40C0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A3EAEC31DEECB4100E40C0D /* PBXTargetDependency */,
+			);
+			name = HLCycleRollViewUITests;
+			productName = HLCycleRollViewUITests;
+			productReference = 3A3EAEC11DEECB4100E40C0D /* HLCycleRollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A3EAE951DEECB4000E40C0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = dhl;
+				TargetAttributes = {
+					3A3EAE9C1DEECB4000E40C0D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					3A3EAEB51DEECB4100E40C0D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A3EAE9C1DEECB4000E40C0D;
+					};
+					3A3EAEC01DEECB4100E40C0D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A3EAE9C1DEECB4000E40C0D;
+					};
+				};
+			};
+			buildConfigurationList = 3A3EAE981DEECB4000E40C0D /* Build configuration list for PBXProject "HLCycleRollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A3EAE941DEECB4000E40C0D;
+			productRefGroup = 3A3EAE9E1DEECB4000E40C0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A3EAE9C1DEECB4000E40C0D /* HLCycleRollView */,
+				3A3EAEB51DEECB4100E40C0D /* HLCycleRollViewTests */,
+				3A3EAEC01DEECB4100E40C0D /* HLCycleRollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A3EAE9B1DEECB4000E40C0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3EAEB01DEECB4100E40C0D /* LaunchScreen.storyboard in Resources */,
+				3A3EAEAD1DEECB4100E40C0D /* Assets.xcassets in Resources */,
+				3A3EAEAB1DEECB4000E40C0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEB41DEECB4100E40C0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEBF1DEECB4100E40C0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A3EAE991DEECB4000E40C0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3EAED61DEECB9100E40C0D /* HLCycleRollView.m in Sources */,
+				3A3EAEA81DEECB4000E40C0D /* ViewController.m in Sources */,
+				3A3EAEA51DEECB4000E40C0D /* AppDelegate.m in Sources */,
+				3A3EAEA21DEECB4000E40C0D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEB21DEECB4100E40C0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3EAEBB1DEECB4100E40C0D /* HLCycleRollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EAEBD1DEECB4100E40C0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3EAEC61DEECB4100E40C0D /* HLCycleRollViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A3EAEB81DEECB4100E40C0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A3EAE9C1DEECB4000E40C0D /* HLCycleRollView */;
+			targetProxy = 3A3EAEB71DEECB4100E40C0D /* PBXContainerItemProxy */;
+		};
+		3A3EAEC31DEECB4100E40C0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A3EAE9C1DEECB4000E40C0D /* HLCycleRollView */;
+			targetProxy = 3A3EAEC21DEECB4100E40C0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A3EAEA91DEECB4000E40C0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A3EAEAA1DEECB4000E40C0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A3EAEAE1DEECB4100E40C0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A3EAEAF1DEECB4100E40C0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A3EAEC81DEECB4100E40C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A3EAEC91DEECB4100E40C0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A3EAECB1DEECB4100E40C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HLCycleRollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A3EAECC1DEECB4100E40C0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HLCycleRollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3A3EAECE1DEECB4100E40C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLCycleRollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLCycleRollView.app/HLCycleRollView";
+			};
+			name = Debug;
+		};
+		3A3EAECF1DEECB4100E40C0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLCycleRollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLCycleRollView.app/HLCycleRollView";
+			};
+			name = Release;
+		};
+		3A3EAED11DEECB4100E40C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLCycleRollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLCycleRollView;
+			};
+			name = Debug;
+		};
+		3A3EAED21DEECB4100E40C0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLCycleRollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwitsoft.HLCycleRollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLCycleRollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A3EAE981DEECB4000E40C0D /* Build configuration list for PBXProject "HLCycleRollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3EAEC81DEECB4100E40C0D /* Debug */,
+				3A3EAEC91DEECB4100E40C0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A3EAECA1DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3EAECB1DEECB4100E40C0D /* Debug */,
+				3A3EAECC1DEECB4100E40C0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A3EAECD1DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3EAECE1DEECB4100E40C0D /* Debug */,
+				3A3EAECF1DEECB4100E40C0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A3EAED01DEECB4100E40C0D /* Build configuration list for PBXNativeTarget "HLCycleRollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3EAED11DEECB4100E40C0D /* Debug */,
+				3A3EAED21DEECB4100E40C0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A3EAE951DEECB4000E40C0D /* Project object */;
+}
