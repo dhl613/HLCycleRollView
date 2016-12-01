@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HLCycleRollView.h"
+#import "HLCycleRollPlusView.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,13 @@
     [self.view addSubview:cycleView];
     
     cycleView.center = self.view.center;
+    
+    HLCycleRollPlusView *plus = [HLCycleRollPlusView cycleRollPlusViewWithFrame:CGRectMake(0, 0, 200, 100) imageNames:images];
+    
+    [self.view addSubview:plus];
+    
+    plus.center = CGPointMake(self.view.center.x, 150);
+    [plus setPageControlOfCenter:CGPointMake(plus.frame.origin.x -30, plus.frame.origin.y - 20)];
 }
 
 

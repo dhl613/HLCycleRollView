@@ -8,7 +8,7 @@
 
 #import "HLCycleRollView.h"
 
-#define kScrollWith  self.bounds.size.width
+#define kScrollWidth  self.bounds.size.width
 #define kScrollHeight self.bounds.size.height
 
 @interface HLCycleRollView () <UIScrollViewDelegate>
@@ -53,20 +53,20 @@
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.pagingEnabled =  YES;
     _scrollView.contentMode = UIViewContentModeScaleAspectFit;
-    _scrollView.contentSize = CGSizeMake(kScrollWith*3, 0);
+    _scrollView.contentSize = CGSizeMake(kScrollWidth*3, 0);
     
     // 初始状态 显示中间图片
-    [_scrollView setContentOffset:CGPointMake(kScrollWith, 0) animated:NO];
+    [_scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
 }
 /** 添加imageView */
 - (void)setupImageViews {
-    _leftIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScrollWith, kScrollHeight)];
+    _leftIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScrollWidth, kScrollHeight)];
     [_scrollView addSubview:_leftIV];
     
-    _centerIV = [[UIImageView alloc] initWithFrame:CGRectMake(kScrollWith, 0, kScrollWith, kScrollHeight)];
+    _centerIV = [[UIImageView alloc] initWithFrame:CGRectMake(kScrollWidth, 0, kScrollWidth, kScrollHeight)];
     [self.scrollView addSubview:_centerIV];
     
-    _rightIV = [[UIImageView alloc] initWithFrame:CGRectMake(kScrollWith*2, 0, kScrollWith, kScrollHeight)];
+    _rightIV = [[UIImageView alloc] initWithFrame:CGRectMake(kScrollWidth*2, 0, kScrollWidth, kScrollHeight)];
     [self.scrollView addSubview:_rightIV];
     
 }
@@ -104,14 +104,14 @@
     
     _pageControl.currentPage = _currentImageIndex;
     
-    [_scrollView setContentOffset:CGPointMake(kScrollWith, 0) animated:NO];
+    [_scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
     
 }
 
 - (void)reloadImage {
     
     CGPoint offset  = _scrollView.contentOffset;
-    if (offset.x > kScrollWith) { // 向右滑动了后
+    if (offset.x > kScrollWidth) { // 向右滑动了后
         
         if (_currentImageIndex == _imagesCounts-1) {
             _currentImageIndex = 0;
@@ -134,7 +134,7 @@
         _centerIV.image = [UIImage imageNamed:_images[_currentImageIndex]];
         
         
-    } else if(offset.x < kScrollWith ) { // 向左滑动了后
+    } else if(offset.x < kScrollWidth ) { // 向左滑动了后
         
         if (_currentImageIndex == 0) {
             _currentImageIndex = _imagesCounts -1;
