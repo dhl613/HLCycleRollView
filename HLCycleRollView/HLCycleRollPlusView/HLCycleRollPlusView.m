@@ -5,6 +5,9 @@
 //  Created by hct019 on 16/12/1.
 //  Copyright © 2016年 dhl. All rights reserved.
 //
+/**
+ 核心思路： 在images的总数上加上2 首尾分别显示最后一张、第一张  以实现无线轮播的效果
+ */
 
 #import "HLCycleRollPlusView.h"
 
@@ -19,7 +22,7 @@
 @property (nonatomic,assign) NSInteger imagesCounts;
 
 @property (nonatomic,strong) NSTimer *timer;
-
+@property (nonatomic,copy) HLCycleRollPlusImagesClickedBlock imageClick;
 @end
 
 @implementation HLCycleRollPlusView
@@ -58,12 +61,20 @@
     // 初始状态 显示中间图片
     [_scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
 }
+/** 添加图片到scrollView */
 - (void)setupImageViews {
     
     for (int i = 0; i < _imagesCounts + 2 ; i++) {
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i * kScrollWidth, 0, kScrollWidth, kScrollHeight)];
         [_scrollView addSubview:imageView];
+        
+        /** 给ImageView添加点击事件*/
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imagesDidTap:)];
+        imageView.tag = i;
+        [imageView addGestureRecognizer:tap];
+        imageView.userInteractionEnabled = YES;
+        /** 给每个ImageView设置图片*/
         if (i == 0) {
             imageView.image = [UIImage imageNamed:_images[_imagesCounts - 1]]; // last image
             continue;
@@ -91,13 +102,35 @@
     
     _pageControl.currentPage = 0;
 }
+/** 图片点击*/
+- (void)imagesDidTap:(id)sender {
+    UITapGestureRecognizer *tap = sender;
+    UIView *tapView = [tap view];
+    NSInteger tag = tapView.tag;
+    if (tag == 0) {
+        /** 位置0为最后一张*/
+    
+        _imageClick(_imagesCounts);
+    
+    } else if (tag == _imagesCounts + 1) {
+        /** 位置最末为第一张*/
+        
+        _imageClick(1);
+    
+    } else {
+    
+        _imageClick(tapView.tag);
+    }
 
+}
 /** API */
 /** 设置pagecontrol的中心点 */
 - (void)setPageControlOfCenter:(CGPoint)center {
     _pageControl.center = center;
 }
-
+- (void)imagesDidClicked:(HLCycleRollPlusImagesClickedBlock)imageClick {
+    _imageClick = imageClick;
+}
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
@@ -147,9 +180,12 @@
     [self addTimer];
 }
 #pragma mark - timer
+/** 请在此处修改滚动间隔时间 */
 - (void)addTimer {
     if (!_timer) {
-        _timer  = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+        //_timer  = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+        _timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
 }
 - (void)nextImage {
@@ -166,7 +202,7 @@
     [_timer invalidate];
     _timer = nil;
 }
-/** 给scrollView滚动动画时间*/
+/** 给scrollView滚动动画时间 一秒后更改scrollView的位置 */
 - (void)delayChangeScrollView {
     [_scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
 }

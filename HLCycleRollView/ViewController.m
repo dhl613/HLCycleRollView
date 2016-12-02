@@ -34,6 +34,10 @@
     
     plus.center = CGPointMake(self.view.center.x, 150);
     [plus setPageControlOfCenter:CGPointMake(plus.frame.origin.x -30, plus.frame.origin.y - 20)];
+    
+    [plus imagesDidClicked:^(NSInteger column) {
+        NSLog(@"%ld",column);
+    }];
 }
 
 
