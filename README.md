@@ -1,6 +1,7 @@
 # HLCycleRollView<br>
 `HLCycleRollView`是一个图片循环轮播器，使用简单，快捷。<br><br>
-
+# Demo
+![](https://github.com/dhl613/HLCycleRollView/blob/master/HLCycleRollView/scrollRoll.gif) <br>
 # Basic Usage<br>
 ``` Objective-C
     NSArray *images = @[@"image0",@"image1",@"image2",@"image3",@"image4"];
