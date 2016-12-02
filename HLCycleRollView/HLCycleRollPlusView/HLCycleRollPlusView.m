@@ -18,6 +18,8 @@
 @property (nonatomic,strong) UIPageControl *pageControl;
 @property (nonatomic,assign) NSInteger imagesCounts;
 
+@property (nonatomic,strong) NSTimer *timer;
+
 @end
 
 @implementation HLCycleRollPlusView
@@ -38,7 +40,7 @@
         [self setupScrollView];
         [self setupImageViews];
         [self setupPageControl];
-        
+        [self addTimer];
     }
     return self;
 }
@@ -108,7 +110,7 @@
         [scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
         return ;
     }
-    
+    //_pageControl.currentPage = (NSInteger)offset.x/kScrollWidth -1;
 }
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
     /** 设置current page*/
@@ -137,6 +139,36 @@
         _pageControl.currentPage = (NSInteger)offset.x/kScrollWidth -1;
         return ;
     }
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self stopTimer];
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self addTimer];
+}
+#pragma mark - timer
+- (void)addTimer {
+    if (!_timer) {
+        _timer  = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    }
+}
+- (void)nextImage {
+    
+    [_scrollView setContentOffset:CGPointMake(kScrollWidth*(_pageControl.currentPage + 2), 0) animated:YES];
+    if (_pageControl.currentPage == 4) {
+        [self performSelector:@selector(delayChangeScrollView) withObject:nil afterDelay:1.0f];
+        _pageControl.currentPage = 0;
+    } else {
+        _pageControl.currentPage += 1;
+    }
+}
+- (void)stopTimer {
+    [_timer invalidate];
+    _timer = nil;
+}
+/** 给scrollView滚动动画时间*/
+- (void)delayChangeScrollView {
+    [_scrollView setContentOffset:CGPointMake(kScrollWidth, 0) animated:NO];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
