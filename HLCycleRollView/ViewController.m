@@ -22,7 +22,7 @@
     
     NSArray *images = @[@"image0",@"image1",@"image2",@"image3",@"image4"];
     
-    HLCycleRollView *cycleView = [HLCycleRollView cycleRollViewWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100) imageNames:images];
+    HLCycleRollView *cycleView = [HLCycleRollView cycleRollViewWithFrame:CGRectMake(0, 0, 200, 100) imageNames:images];
     
     [self.view addSubview:cycleView];
     
@@ -33,7 +33,7 @@
     [self.view addSubview:plus];
     
     plus.center = CGPointMake(self.view.center.x, 150);
-    [plus setPageControlOfCenter:CGPointMake(plus.frame.origin.x -30, plus.frame.origin.y - 20)];
+    [plus setPageControlOfCenter:CGPointMake(plus.frame.size.width -50, plus.frame.size.height - 20)];
     
     [plus imagesDidClicked:^(NSInteger column) {
         NSLog(@"%ld",column);
