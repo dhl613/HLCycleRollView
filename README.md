@@ -23,5 +23,9 @@ NSArray *images = @[@"image0",@"image1",@"image2",@"image3",@"image4"];
     }];
 ```
 
+# Suggestion
+循环轮播器有两个，但是HLCycleRollView不够丝滑，后期也没有加定时器，点击事件，使用起来很不方便<br>
+重点推荐HLCycleRollPlusView，循环轮播器的plus版，非常丝滑，拿来直接使用。<br><br>
+
 # License<br>
 HLCycleRollView is licensed under the MIT license.[(http://opensource.org/licenses/MIT)](http://opensource.org/licenses/MIT)<br>
