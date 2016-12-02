@@ -1,5 +1,5 @@
 # HLCycleRollView
-`HLCycleRollView`是一个图片循环轮播器，使用简单，快捷。<br><br>
+`HLCycleRollView` 是一个图片循环轮播器，使用简单，快捷。<br><br>
 # Demo
 ![](https://github.com/dhl613/HLCycleRollView/blob/master/HLCycleRollView/scrollRoll.gif) <br>
 # Basic Usage
