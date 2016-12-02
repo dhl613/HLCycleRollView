@@ -3,7 +3,7 @@
 
 # Basic Usage<br>
 ``` Objective-C
-NSArray *images = @[@"image0",@"image1",@"image2",@"image3",@"image4"];
+    NSArray *images = @[@"image0",@"image1",@"image2",@"image3",@"image4"];
     
     HLCycleRollView *cycleView = [HLCycleRollView cycleRollViewWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100) imageNames:images];
     
