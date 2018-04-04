@@ -17,6 +17,8 @@
 		3A3EAEC61DEECB4100E40C0D /* HLCycleRollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAEC51DEECB4100E40C0D /* HLCycleRollViewUITests.m */; };
 		3A3EAED61DEECB9100E40C0D /* HLCycleRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EAED51DEECB9100E40C0D /* HLCycleRollView.m */; };
 		3AC5E3181DEFC5CF00A2D5BD /* HLCycleRollPlusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5E3171DEFC5CF00A2D5BD /* HLCycleRollPlusView.m */; };
+		D2A04E332074A24D00100514 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A04E322074A24D00100514 /* NSString+MD5.m */; };
+		D2A04E362074B13D00100514 /* HLGroupImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A04E342074B13D00100514 /* HLGroupImageTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		3A3EAED51DEECB9100E40C0D /* HLCycleRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCycleRollView.m; sourceTree = "<group>"; };
 		3AC5E3161DEFC5CF00A2D5BD /* HLCycleRollPlusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCycleRollPlusView.h; sourceTree = "<group>"; };
 		3AC5E3171DEFC5CF00A2D5BD /* HLCycleRollPlusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCycleRollPlusView.m; sourceTree = "<group>"; };
+		D2A04E312074A24D00100514 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		D2A04E322074A24D00100514 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		D2A04E342074B13D00100514 /* HLGroupImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGroupImageTool.m; sourceTree = "<group>"; };
+		D2A04E352074B13D00100514 /* HLGroupImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGroupImageTool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 		3AC5E3151DEFC5CF00A2D5BD /* HLCycleRollPlusView */ = {
 			isa = PBXGroup;
 			children = (
+				D2A04E312074A24D00100514 /* NSString+MD5.h */,
+				D2A04E322074A24D00100514 /* NSString+MD5.m */,
+				D2A04E352074B13D00100514 /* HLGroupImageTool.h */,
+				D2A04E342074B13D00100514 /* HLGroupImageTool.m */,
 				3AC5E3161DEFC5CF00A2D5BD /* HLCycleRollPlusView.h */,
 				3AC5E3171DEFC5CF00A2D5BD /* HLCycleRollPlusView.m */,
 			);
@@ -299,10 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A04E332074A24D00100514 /* NSString+MD5.m in Sources */,
 				3AC5E3181DEFC5CF00A2D5BD /* HLCycleRollPlusView.m in Sources */,
 				3A3EAED61DEECB9100E40C0D /* HLCycleRollView.m in Sources */,
 				3A3EAEA81DEECB4000E40C0D /* ViewController.m in Sources */,
 				3A3EAEA51DEECB4000E40C0D /* AppDelegate.m in Sources */,
+				D2A04E362074B13D00100514 /* HLGroupImageTool.m in Sources */,
 				3A3EAEA21DEECB4000E40C0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  HLCycleRollView.m
 //  HLBroswerImageCycleDemo
 //
-//  Created by hct019 on 16/11/30.
+//  Created by dhl613 on 16/11/30.
 //  Copyright © 2016年 dhl. All rights reserved.
 //
 

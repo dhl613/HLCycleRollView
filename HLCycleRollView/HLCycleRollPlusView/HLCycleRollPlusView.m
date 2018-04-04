@@ -2,7 +2,7 @@
 //  HLCycleRollPlusView.m
 //  HLCycleRollView
 //
-//  Created by hct019 on 16/12/1.
+//  Created by dhl613 on 16/12/1.
 //  Copyright © 2016年 dhl. All rights reserved.
 //
 /**
@@ -10,6 +10,7 @@
  */
 
 #import "HLCycleRollPlusView.h"
+#import "HLGroupImageTool.h"
 
 #define kScrollWidth   self.bounds.size.width
 #define kScrollHeight  self.bounds.size.height
@@ -35,9 +36,14 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame imagesNames:(NSArray<NSString *> *)imageNames {
-    if (self = [super init]) {
+    if (self = [super initWithFrame:frame]) {
         self.frame = frame;
         _images = imageNames;
+        NSMutableArray<UIImage *> *imageArr = [NSMutableArray arrayWithCapacity:imageNames.count];
+        for (NSString *imagestr in imageNames) {
+            [imageArr addObject:[UIImage imageNamed:imagestr]];
+        }
+        _images = [imageArr copy];
         _imagesCounts = _images.count;
         
         [self setupScrollView];
@@ -47,7 +53,26 @@
     }
     return self;
 }
-
+- (instancetype)initWithFrame:(CGRect)frame urls:(NSArray<NSString *> *)urls {
+    if (self = [super initWithFrame:frame]) {
+        self.frame = frame;
+        HLGroupImageTool *tool = [[HLGroupImageTool alloc] init];
+        [tool downloadImagesWithURLs:urls completeHandler:^(NSDictionary *imageDic) {
+            NSMutableArray *imageDatas = [NSMutableArray array];
+            for (NSInteger i = 0; i < imageDic.allKeys.count; i++) {
+                [imageDatas addObject:[imageDic objectForKey:@(i)]];
+            }
+            self.images = [imageDatas copy];
+            self.imagesCounts = imageDatas.count;
+            
+            [self setupScrollView];
+            [self setupImageViews];
+            [self setupPageControl];
+            [self addTimer];
+        }];
+    }
+    return self;
+}
 - (void)setupScrollView {
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     [self addSubview:_scrollView];
@@ -74,16 +99,17 @@
         imageView.tag = i;
         [imageView addGestureRecognizer:tap];
         imageView.userInteractionEnabled = YES;
+        
         /** 给每个ImageView设置图片*/
+        
         if (i == 0) {
-            imageView.image = [UIImage imageNamed:_images[_imagesCounts - 1]]; // last image
+            imageView.image = _images[_imagesCounts - 1]; // last image
+            continue;
+        } else if (i == _imagesCounts +1) {
+            imageView.image = _images[0];
             continue;
         }
-        if (i == _imagesCounts +1) {
-            imageView.image = [UIImage imageNamed:_images[0]];
-            continue;
-        }
-        imageView.image = [UIImage imageNamed:_images[i-1]];
+        imageView.image = _images[i-1];
     }
 }
 /** 设置page */
@@ -110,16 +136,16 @@
     if (tag == 0) {
         /** 位置0为最后一张*/
     
-        _imageClick(_imagesCounts);
+        _imageClick(_imagesCounts - 1);
     
     } else if (tag == _imagesCounts + 1) {
         /** 位置最末为第一张*/
         
-        _imageClick(1);
+        _imageClick(0);
     
     } else {
     
-        _imageClick(tapView.tag);
+        _imageClick(tapView.tag - 1);
     }
 
 }
@@ -185,13 +211,15 @@
     if (!_timer) {
         //_timer  = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
         _timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+        
         [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
 }
 - (void)nextImage {
     
     [_scrollView setContentOffset:CGPointMake(kScrollWidth*(_pageControl.currentPage + 2), 0) animated:YES];
-    if (_pageControl.currentPage == 4) {
+    if (_pageControl.currentPage == _imagesCounts - 1) {
+        /// 自动轮播至最后一张图片 回滚到第一张
         [self performSelector:@selector(delayChangeScrollView) withObject:nil afterDelay:1.0f];
         _pageControl.currentPage = 0;
     } else {
